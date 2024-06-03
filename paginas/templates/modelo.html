@@ -1,0 +1,296 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Adicionando ao documento o suporte a caracteres acentuados: -->
+    <meta charset="utf-8" />
+    <!-- Indica que o conteúdo deverá aparecer, por padrão, ocupando todo o espaço disponível da tela e com uma escala de 1:1: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/Icone.png' %}" type="image/x-icon">
+
+    {% block Titulo %}
+    <title>Modelo</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->
+    <style>
+        body {
+            /* background-image: linear-gradient(90deg, lightcyan, blue); */
+            background-image: url("{% static 'img/Imagem_1_Plano_Fundo.jpg' %}");
+        }
+    </style>
+</head>
+
+<body>
+    {% block Identidade %}
+    <header>
+        <hgroup>
+            <h1 id="titulo-principal" class="topico-principal"><em>Offshore Wind Energy&copy;</em></h1>
+            <h2 id="subtitulo" class="topico-principal">Informações Técnicas Sobre Energia Eólica <em>Offshore</em></h2>
+            <h5 id="subtitulo">Sophie Sistemas Educacionais&reg;</h5>
+        </hgroup>
+    </header>
+    {% endblock %}
+
+    {% block Navegacao_Superior %}
+    <hgroup>
+        <p id="menu"><a href="{% url 'inicio' %}" class="especial" target="_self">&nbsp;&nbsp;Início</a>
+            <a href="{% url 'artigos' %}" class="especial" target="_self">&nbsp;&nbsp;Artigos</a>
+            <a href="{% url 'noticias' %}" class="especial" target="_self">&nbsp;&nbsp;Notícias</a>
+            <a href="{% url 'ferramentas' %}" class="especial" target="_self">&nbsp;&nbsp;Ferramentas</a>
+            <a href="{% url 'contato' %}" class="especial" target="_self">&nbsp;&nbsp;Contato</a>
+            <a href="{% url 'sobre' %}" class="especial" target="_self">&nbsp;&nbsp;Sobre</a>
+            <a href="{% url 'mapa_site' %}" class="especial" target="_self">&nbsp;&nbsp;Mapa do
+                Site</a>
+        </p>
+    </hgroup>
+    {% endblock %}
+
+    {% block Barra_Buscas %}
+    <hgroup class="caixa-busca">
+        <div class="caixa-input">
+            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icone-input">
+                <path
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                </path>
+            </svg>
+            <input type="text" class="input-pesquisa" value="Buscar no site " />
+            <button class="botao botao--entrar">Pesquisar</button>
+        </div>
+    </hgroup>
+    {% endblock %}
+
+    {% block Navegacao_Lateral %}
+    <aside>
+        <nav>
+            <h3>&nbsp;Conteúdos Correlatos</h3>
+            &nbsp;<strong><em>Roadmap Offshore</em> EPE:</strong>
+            <ul type="square">
+                <li> <a href="https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/roadmap-eolica-offshore-brasil"
+                        hreflang="pt-br" target="_blank" rel="external"><em>Roadmap</em></a></li>
+                <li> <a href="https://storymaps.arcgis.com/stories/85011a3a5b5e4208abccf546cdd0de2f" hreflang="pt-br"
+                        target="_blank" rel="external"><em>Roadmap</em> interativo</a></li>
+            </ul>
+            &nbsp;<strong>Sugestões Websites:</strong>
+            <ul type="square">
+                <li> <a href="https://abeeolica.org.br/" hreflang="pt-br" target="_blank" rel="external">Abeeólica</a>
+                </li>
+                <li> <a href="https://www.enelgreenpower.com/pt/learning-hub/energias-renoveveis/energia-eolica/parque-e%C3%B3lico-offshore"
+                        hreflang="pt-br" target="_blank" rel="external">Enel</a></li>
+                <li> <a href="https://www.neoenergia.com/energia-eolica-offshore" hreflang="pt-br" target="_blank"
+                        rel="external">Neoenergia</a></li>
+                <li> <a href="https://www.iberdrola.com/sustentabilidade/como-funcionam-os-parques-eolicos-offshore"
+                        hreflang="pt-br" target="_blank" rel="external">Iberdrola</a>
+                </li>
+            </ul>
+            &nbsp;<strong>Sugestões Vídeos:</strong>
+            <ul type="square">
+                <li> <a href="https://www.youtube.com/watch?v=7wu1VUoYHvI" hreflang="pt-br" target="_blank"
+                        rel="external">Estudo do potencial da &nbsp; energia eólica <em>offshore</em> no &nbsp;
+                        Brasil</a></li>
+                <li> <a href="https://www.youtube.com/watch?v=lZMrc1QtG2w" hreflang="pt-br" target="_blank"
+                        rel="external">Instalação de fazenda &nbsp; eólica no mar</a></li>
+                <li> <a href="https://www.youtube.com/watch?v=1iA_z4tTAms" hreflang="pt-br" target="_blank"
+                        rel="external">Montagem de parque &nbsp;&nbsp; eólico <em>offshore</em></a>
+                </li>
+                <li> <a href="https://www.youtube.com/watch?v=5sS274eHg5Y" hreflang="pt-br" target="_blank"
+                        rel="external">Veja parque eólico <em>offshore</em>&nbsp;&nbsp; em ação!</a>
+                </li>
+                <li> <a href="https://www.youtube.com/watch?v=YQy5nRf69jw&t=8s" hreflang="pt-br" target="_blank"
+                        rel="external"> Turbina eólica <em>offshore</em>:&nbsp;&nbsp; energia do futuro</a>
+                </li>
+            </ul>
+            <h3>&nbsp;Links Governamentais</h3>
+            &nbsp;<strong>Ministérios:</strong>
+            <ul type="square">
+                <li> <a href="https://www.gov.br/mme/pt-br" hreflang="pt-br" target="_blank" rel="external">MME</a></li>
+                <li> <a href="https://www.gov.br/mma/pt-br" hreflang="pt-br" target="_blank" rel="external">MMA</a></li>
+                <li> <a href="https://www.gov.br/mcti/pt-br" hreflang="pt-br" target="_blank" rel="external">MCTI</a>
+                </li>
+            </ul>
+            &nbsp;<strong>Órgãos Sistema Elétrico:</strong>
+            <ul type="square">
+                <li><a href="https://www.gov.br/aneel/pt-br" hreflang="pt-br" target="_blank" rel="external">ANEEL</a>
+                </li>
+                <li><a href="https://www.ons.org.br/" hreflang="pt-br" target="_blank" rel="external">ONS </a></li>
+                <li><a href="https://www.ccee.org.br/" hreflang="pt-br" target="_blank" rel="external">CCEE </a></li>
+                <li><a href="https://www.epe.gov.br/pt" hreflang="pt-br" target="_blank" rel="external">EPE </a></li>
+            </ul>
+            &nbsp;<strong>Órgãos Ambientais:</strong>
+            <ul type="square">
+                <li><a href="https://www.gov.br/ibama/pt-br" hreflang="pt-br" target="_blank" rel="external">IBAMA</a>
+                </li>
+                <li><a href="https://conama.mma.gov.br/" hreflang="pt-br" target="_blank" rel="external">CONAMA</a></li>
+                <li><a href="https://www.gov.br/icmbio/pt-br" hreflang="pt-br" target="_blank" rel="external">ICMBio</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    {% endblock %}
+
+    {% block Conteudos %}
+    <main>
+        <section>
+            <article>
+                <h1>&nbsp;1º Artigo</h1>
+                <picture>
+                    <div>
+                        <a href="/"><img src="{% static 'img/Imagem_Artigo_1.jpg' %}" alt="Imagem Artigo 1"
+                                class="imagem-artigo"></a>
+                    </div>
+                </picture>
+                <h2>&nbsp;Subtítulo referente ao 1º artigo</h2>
+                <p class="texto">&nbsp; A energia eólica esta associada a energia cinética das
+                    <ins>massas de ar em movimento.</ins> A área de varredura das pás dos aerogeradores é dada em
+                    m<sup>2</sup>. <q>No
+                        caso da eólica <em>offshore</em> a mesma é bastante influenciada pela presença de moleculas de
+                        H<sub>2</sub>O em suspensão no ar.</q>
+                </p>
+                <p class="citacao">
+                <blockquote
+                    cite="https://www.iberdrola.com/sustentabilidade/como-funcionam-os-parques-eolicos-offshore">A
+                    energia eólica offshore é a fonte de energia limpa e renovável que se obtém aproveitando a força do
+                    vento
+                    que sopra em alto-mar, onde este alcança uma velocidade maior e mais constante, devido à
+                    inexistência de
+                    barreiras. Para explorar ao máximo esse recurso, são desenvolvidas megaestruturas assentadas sobre o
+                    leito
+                    marinho e dotadas das últimas inovações técnicas.</blockquote>
+                </p>                
+                <p class="texto">&nbsp; A <abbr title="Massa específica do ar"><em>ρ</em></abbr> vale 1,225.</p>
+                <time datetime="2017-10-31T11:21:00+02:00">
+                    Quarta-feira, 22 de Maio de 2024
+                </time>
+                <p>&nbsp;&nbsp;<a class="botao-links" href="{% url 'artigo_1' %}" target="_self" rel="next">Ver artigo
+                        completo</a>
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h1>&nbsp;Energia Eólica <em>Onshore</em> X Energia Eólica <em>Offshore</em></h1>
+                <picture>
+                    <div>
+                        <a href="/"><img src="{% static 'img/Imagem_Artigo_2.jpg' %}" alt="Imagem Artigo 2"></a>
+                    </div>
+                </picture>
+                <h2>&nbsp;Breve Conceituação Teórica</h2>
+                <dl>
+                    <dt>&nbsp;&nbsp;Energia Eólica <em>Onshore</em>:</dt>
+                    <dd>Aproveitamento da energia cinética dos ventos que circulam no continente.</dd>
+                    <dt>&nbsp;&nbsp;Energia Eólica <em>Offshore</em>:</dt>
+                    <dd>Aproveitamento da energia cinética dos ventos que circulam no mar.</dd>
+                </dl>
+                <p class="texto">&nbsp; A energia eólica esta associada a energia cinética das
+                    <ins>massas de ar em movimento.</ins> A área de varredura das pás dos aerogeradores é dada em
+                    m<sup>2</sup>. <q>No
+                        caso da eólica <em>offshore</em> a mesma é bastante influenciada pela presença de moleculas de
+                        H<sub>2</sub>O em suspensão no ar.</q>
+                </p>
+                <p>&nbsp;&nbsp;<a class="botao-links" href="{% url 'artigo_2' %}" target="_self" rel="next">Ver artigo
+                        completo</a>
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>&nbsp;Apostila Sobre Geração Eólica <em>Offshore</em></h2>
+                <picture>
+                    <div>
+                        <a href="/"><img src="{% static 'img/Imagem_Artigo_3.jpg' %}" alt="Imagem Artigo 3"></a>
+                    </div>
+                </picture>
+                <h1>&nbsp;Apostila Disponível para Download</h1>
+                <p class="texto">&nbsp;&nbsp; Este texto foi escrito com a premissa básica de fornecer os subsídios
+                    teóricos acerca dos conceitos correlatos a área de geração de energia elétrica a partir da
+                    fonte eólica, mais especificamente em sua modalidade offshore. Espera-se que o leitor,
+                    através dos conceitos discutidos neste material, forme o alicerce conceitual básico que
+                    o habilite para um posterior aprofundamento desta temática.
+                </p>
+                <p>&nbsp;&nbsp;<a class="botao-links"
+                        href="{% static 'downloads/Apostila_Geração_Eólica_Offshore_Prof._Eng._Dennys_Lopes_Alves_Versão_0.1.pdf' %} "
+                        download="Apostila_Geração_Eólica_Offshore_Prof._Eng._Dennys_Lopes_Alves_Versão_0.1.pdf"
+                        type="application/pdf">Clique aqui para realizar o download da apostila!</a>
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>&nbsp;Licenciamento Ambiental de Empreendimentos <em>Offshore</em></h2>
+                <picture>
+                    <div>
+                        <a href="/"><img src="{% static 'img/Imagem_Artigo_4.jpg' %}" alt="Imagem Artigo 4"></a>
+                    </div>
+                </picture>
+                <h1>Podcast discute aspectos da legislação</h1>
+                <p>&nbsp;&nbsp;Áudio do podcast relacionado ao licenciamento ambiental dos empreendimentos <em>offshore</em>:</p>
+                &nbsp;&nbsp;&nbsp;<audio preload="metadata" controls loop played>
+                    <source src="{% static 'downloads/04-Canto_Para_O_Senegal.mp3' %}" type="audio/mpeg">
+                </audio>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>&nbsp;&nbsp;Turbinas Eólicas <em>Offshore</em></h2>
+                <picture>
+                    <div>
+                        <a href="/"><img src="{% static 'img/Imagem_Artigo_5.jpg' %}" alt="Imagem Artigo 5"></a>
+                    </div>
+                </picture>
+                <h1>&nbsp;Canal Apresenta Informações Básicas Sobre a Energia e as Turbinas Eólicas <em>Offshore</em></h1>
+                <p>&nbsp; Vídeo canal aTech PT acerca das turbinas eólicas <em>offshore</em>:</p>
+                &nbsp;&nbsp;&nbsp;<video id="video" width="300" height = "500" poster="{% static 'img/Icone.png' %}" controls loop played>
+                    <source src="{% static 'downloads/A Turbina Eólica Offshore É A Energia Do Futuro.mp4' %}"
+                        type="video/mp4">
+                </video>
+                <p>&nbsp; Vídeo canal aTech PT a energia eólica <em>offshore</em> é o futuro:</p>
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YQy5nRf69jw?si=N5e-b5m7s55JuAjG"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+    </main>
+    {% endblock %}
+
+    {% block Navegacao_Inferior %}
+    <footer>
+        <div>
+            <div class="caixa-rodape caixa-rodape--borda">
+                <a href="{% url 'sobre' %}" target="_self">Sobre</a>
+                <a href="{% url 'publicidade' %}" target="_self">&nbsp;&nbsp;Publicidade</a>
+                <a href="{% url 'envio_artigos' %}" target="_self">&nbsp;&nbsp;Envio Artigos</a>
+                <a href="{% url 'politica_direitos_autorais' %}" target="_self">&nbsp;&nbsp;Política
+                    Direitos Autorais</a>
+            </div>
+        </div>
+
+        {% block Rodape %}
+        <div class="caixa-rodape">
+            <small>&nbsp;<em>Copyright&nbsp;</em><a href="{% url 'sofhie_sistemas_educacionais' %}" hreflang="pt-br"
+                    target="_self"> Sofhie Sistemas Educacionais&copy;</a></small>
+            <small>| <em>Design by</em> Engº Dennys Lopes Alves.</small>
+        </div>
+        {% endblock %}
+    </footer>
+    {% endblock %}
+    <small>
+        <h3 id="citação" class="topico-principal">"Não viva para que a sua presença seja notada, mas para que a sua
+            falta seja sentida" (Bob Marley).</h3>
+    </small>
+
+    <script src="{% static 'js/jquery-3.7.0.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>

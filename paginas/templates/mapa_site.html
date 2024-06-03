@@ -1,0 +1,56 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block Titulo %}
+<title>Mapa Site</title>
+{% endblock %}
+
+{% block Conteudos %}
+<main>
+	<section>
+		<article>
+			<h2>&nbsp;Mapa do Site</h2>
+			<picture>
+				<div>
+					<a href="/"><img src="{% static 'img/icon-1968240_640.png' %}" alt="Imagem Sobre"
+							class="imagem-artigo"></a>
+				</div>
+			</picture>
+			<hr>
+			<p>&nbsp;&nbsp;Links Internos:</p>
+			<p> <a href="{% url 'inicio' %}" class="especial" target="_self">&nbsp;&nbsp;Início</a>
+				<a href="{% url 'artigos' %}" class="especial" target="_self">&nbsp;&nbsp;Artigos</a>
+				<a href="{% url 'noticias' %}" class="especial" target="_self">&nbsp;&nbsp;Notícias</a>
+				<a href="{% url 'ferramentas' %}" class="especial" target="_self">&nbsp;&nbsp;Ferramentas</a>
+				<a href="{% url 'contato' %}" class="especial" target="_self">&nbsp;&nbsp;Contato</a>
+				<a href="{% url 'sobre' %}" class="especial" target="_self">&nbsp;&nbsp;Sobre</a>
+				<a href="{% url 'mapa_site' %}" class="especial" target="_self">&nbsp;&nbsp;Mapa do Site</a>
+				<a href="{% url 'sobre' %}" target="_self">Sobre</a>
+				<a href="{% url 'publicidade' %}" target="_self">&nbsp;&nbsp;Publicidade</a>
+				<a href="{% url 'envio_artigos' %}" target="_self">&nbsp;&nbsp;Envio Artigos</a>
+				<a href="{% url 'politica_direitos_autorais' %}" target="_self">&nbsp;&nbsp;Política Direitos Autorais</a>				
+			</p>
+			<hr>
+			<p>&nbsp;&nbsp;Links Externos:</p>
+			<p> <a href="https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/roadmap-eolica-offshore-brasil"
+					hreflang="pt-br" target="_blank" rel="external"><em>&nbsp;&nbsp;Roadmap</em></a>
+				<a href="https://storymaps.arcgis.com/stories/85011a3a5b5e4208abccf546cdd0de2f" hreflang="pt-br"
+					target="_blank" rel="external"><em>&nbsp;&nbsp;Roadmap</em> interativo</a>
+				<a href="https://www.gov.br/mme/pt-br" hreflang="pt-br" target="_blank" rel="external">&nbsp;&nbsp;MME</a>
+				<a href="https://www.gov.br/mma/pt-br" hreflang="pt-br" target="_blank" rel="external">&nbsp;&nbsp;MMA</a>
+				<a href="https://www.gov.br/mcti/pt-br" hreflang="pt-br" target="_blank" rel="external">&nbsp;&nbsp;MCTI</a>
+				<a href="https://www.gov.br/aneel/pt-br" hreflang="pt-br" target="_blank" rel="external">&nbsp;&nbsp;ANEEL</a>
+				<a href="https://www.ons.org.br/" hreflang="pt-br" target="_blank" rel="external">&nbsp;&nbsp;ONS </a>
+				<a href="https://www.ccee.org.br/" hreflang="pt-br" target="_blank" rel="external">&nbsp;&nbsp;CCEE </a>
+				<a href="https://www.epe.gov.br/pt" hreflang="pt-br" target="_blank" rel="external">&nbsp;&nbsp;EPE </a>
+				<a href="https://www.gov.br/ibama/pt-br" hreflang="pt-br" target="_blank" rel="external">&nbsp;&nbsp;IBAMA</a>
+				<a href="https://conama.mma.gov.br/" hreflang="pt-br" target="_blank" rel="external">&nbsp;&nbsp;CONAMA</a>
+				<a href="https://www.gov.br/icmbio/pt-br" hreflang="pt-br" target="_blank" rel="external">&nbsp;&nbsp;ICMBio</a>
+			</p>
+			<hr>
+			<br>
+		</article>
+	</section>
+</main>
+{% endblock %}

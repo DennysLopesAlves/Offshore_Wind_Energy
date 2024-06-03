@@ -1,0 +1,30 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block Titulo %}
+<title>Publicidade</title>
+{% endblock %}
+
+{% block Conteudos %}
+<main>
+	<section>
+		<article>
+			<h2>Publicidade</h2>
+			<picture>
+				<div>
+					<a href="/"><img src="{% static 'img/marketing-6078538_640.png' %}" alt="Imagem Publicidade"
+							class="imagem-artigo"></a>
+				</div>
+			</picture>
+			<picture>
+				<div>
+					<a href="/"><img src="{% static 'img/coming-soon-4993716_640.png' %}" alt="Imagem Publicidade"
+							class="imagem-artigo"></a>
+				</div>
+			</picture>
+			
+		</article>
+	</section>
+</main>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block Titulo %}
+<title>Envio Artigos</title>
+{% endblock %}
+
+{% block Conteudos %}
+<main>
+	<section>
+		<article>
+			<h2>Envio de Artigos Para Publicação</h2>
+			<picture>
+				<div>
+					<a href="/"><img src="{% static 'img/upload-1118929_640.png' %}" alt="Imagem Envio de Artigos"
+							class="imagem-artigo"></a>
+				</div>
+			</picture>
+
+			<picture>				
+				<div>
+					<a href="/"><img src="{% static 'img/coming-soon-4993716_640.png' %}" alt="Imagem Envio de Artigos"
+							class="imagem-artigo"></a>
+				</div>
+			</picture>
+			
+		</article>
+	</section>
+</main>
+{% endblock %}

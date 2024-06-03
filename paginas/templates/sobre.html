@@ -1,0 +1,46 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block Titulo %}
+<title>Sobre</title>
+{% endblock %}
+
+{% block Conteudos %}
+<main>
+	<section>
+		<article>
+			<hr>
+			<picture>
+				<div>
+					<a href="/"><img src="{% static 'img/imprint-2508603_640.jpg' %}" alt="Imagem Sobre"
+							class="imagem-artigo"></a>
+				</div>
+			</picture>			
+			<h2>Sobre o <em>Offshore Wind Energy</em></h2>
+			<p> &nbsp;&nbsp;Plataforma web (website) destinada a publicizar informações
+				e conceitos técnicos afins a temática de geração eólico-elétrica na modalidade <em>offshore</em>.
+				Desenvolvido durante o semestre letivo 2024.1, atualmente (maio/2024) em sua versão 1.0.</p>
+			<hr>
+			<h2>Sobre o Projeto</h2>
+			<hr>
+			<p> &nbsp;&nbsp;O principal objetivo deste projeto foi produzir uma plataforma web (website),
+				através do uso das linguagens HTML, CSS e do framework Boostrap, destinada
+				a publicizar informações e conceitos técnicos afins a temática de geração
+				eólico-elétrica na modalidade <em>offshore</em>.</p>
+			<p> &nbsp;&nbsp;Neste ínterim espera-se entregar como produto técnico-tecnológico um portal virtual
+				destinado a suscitar a reflexão e o debate acerca desta tecnologia, repercutindo notícias
+				dos órgãos oficiais, notas técnicas, políticas públicas, legislações, mecanismos de incentivo,
+				opiniões e artigos técnicos autorais sobre a temática citada. </p>
+			<p> &nbsp;&nbsp;A presente plataforma terá seu escopo de aplicação prática correlacionado a disponibilização
+				de acesso, de forma gratuita, a informação técnica qualificada, contribuindo no sentido de
+				difundir a geração eólica do tipo <em>offshore</em> para sociedade civil de um modo geral,
+				jogando luz sobre as discussões públicas correlatas as várias vertentes da expansão
+				do aproveitamento energético do fluxo das massas de ar que circulam no mar.</p>
+			<hr>
+		</article>
+	</section>
+</main>
+
+
+{% endblock %}

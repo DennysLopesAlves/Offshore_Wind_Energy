@@ -1,0 +1,30 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block Titulo %}
+<title>Contato</title>
+{% endblock %}
+
+{% block Conteudos %}
+<main>
+	<section>
+		<article>
+			<h2>Contato</h2>
+			<picture>
+				<div>
+					<a href="/"><img src="{% static 'img/contact-us-1908763_640.png' %}" alt="Imagem Contato"
+							class="imagem-artigo"></a>
+				</div>
+			</picture>
+			<hr>			
+			<p>&nbsp;&nbsp;Desenvolvido por:</p>
+			<p>&nbsp;&nbsp;<b>Dennys Lopes Alves</b> - dennys.alves@ifrn.edu.br;</p> 
+			<p>&nbsp;&nbsp;<b>Miqueas Marcos Silva Bezerra</b> - miqueas.m@academico.ifrn.edu.br;</p> 
+			<p>&nbsp;&nbsp;<b>Ryan Emanoel Silva de Lima</b> - ryan.emanoel@academico.ifrn.edu.br;</p> 
+			<p>&nbsp;&nbsp;<b>Rodrigo Yaegashi Valle</b> - rodrigo.valle@academico.ifrn.edu.br.</p>
+			<hr>			
+		</article>
+	</section>
+</main>
+{% endblock %}

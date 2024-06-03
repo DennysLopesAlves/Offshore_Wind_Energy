@@ -1,0 +1,29 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block Titulo %}
+<title>Notícias</title>
+{% endblock %}
+
+{% block Conteudos %}
+<main>
+	<section>
+		<article>
+			<h2>Notícias</h2>
+			<picture>
+				<div>
+					<a href="/"><img src="{% static 'img/newspaper-34126_640.png' %}" alt="Imagem Notícias"
+							class="imagem-artigo"></a>
+				</div>
+			</picture>
+			<picture>
+				<div>
+					<a href="/"><img src="{% static 'img/coming-soon-4993716_640.png' %}" alt="Imagem Notícias"
+							class="imagem-artigo"></a>
+				</div>
+			</picture>			
+		</article>
+	</section>
+</main>
+{% endblock %}

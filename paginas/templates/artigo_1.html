@@ -1,0 +1,25 @@
+{% extends 'modelo.html' %}
+
+{% load static %}
+
+{% block Titulo %}
+<title>Artigo 1</title>
+{% endblock %}
+
+{% block Conteudos %}
+<main>
+	<section>
+		<article>
+			<h1>&nbsp;Artigo 1</h1>
+			<picture>
+				<div>
+					<a href="/"><img src="{% static 'img/Site_Construcao.jpg' %}" alt="Imagem Artigo 1"
+							class="imagem-artigo"></a>
+				</div>
+			</picture>
+			<h2>&nbsp;Subtítulo referente a seção Artigo 1</h2>
+			<p> Descrição do Artigo 1</p>
+		</article>
+	</section>
+</main>
+{% endblock %}
